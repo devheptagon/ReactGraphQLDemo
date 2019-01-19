@@ -13,18 +13,22 @@ describe('helper functions are being tested', () => {
 jest.mock('axios')
 
 describe('proxy functions are being tested', () => {    
-    test('fetches data from graphql server', () => {
+    test('fetches data from graphql server', async () => {
+        expect.assertions(1)
         const mockedResponse = {
-            productList: [
-                {
-                    productID: '123',
-                    name: 'pie',
-                    unitPrice: '100'
-                }
-            ]
+            data: {
+                productList: [
+                    {
+                        productID: '123',
+                        name: 'pie',
+                        unitPrice: '100'
+                    }
+                ]
+            }            
         }
-        axios.mockResolvedValue(mockedResponse)
-        
-        Proxy.postData(1).then(r => expect(r).toEqual(mockedResponse.productList))
+        axios.mockResolvedValue(mockedResponse)        
+        Proxy.postData(1).then(r => {
+            expect(r).toEqual(mockedResponse.data)
+        })
     })
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Home from '../components/home/home'
+import Loading from '../components/shared/loading'
 
 it('renders without crashing', () => {
-  let mounted = shallow(<Home />)  
+  let mounted = shallow(<Loading />)  
 });
