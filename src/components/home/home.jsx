@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Wrapper } from './home.style'
 import { Link } from 'react-router-dom'
 import { Jumbotron } from 'react-bootstrap'
-import Button from '../shared/button'
 
 class Home extends Component {
   render() {
@@ -10,15 +9,12 @@ class Home extends Component {
       <Wrapper>
         <Jumbotron>
           <p>
-            This is a simple hero unit, a simple jumbotron-style component for calling
-            extra attention to featured content or information.
+            This is a sample React.JS application fetching data from a public GraphQL server for demo purposes.                       
           </p>
           <p>
-            <Button>
-              <Link to="/product-list/1">
-                START SAMPLE APPLICATION
-                </Link>
-            </Button>
+            <Link to="/product-list/1">
+              START SAMPLE APPLICATION
+            </Link>
           </p>
         </Jumbotron>
       </Wrapper>
