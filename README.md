@@ -13,13 +13,14 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### Tech Stack:
     - Hosted at AWS EC2, running on Apache
-    - Redux for state management
-    - React-router for routing
-    - Redux-saga for saga design pattern
-    - GraphQL proxy as query target (https://graphql-compose.herokuapp.com/northwind/?)
-    - Axios for fetching data
-    - Styled-components for styling (should be preferred over CSS/SASS according to React official docs)
+    - Bootstrap for responsive design
+    - Styled-components for styling (should be preferred over CSS/LESS/SASS according to React official docs)
     - Context api for Theming
+    - Redux for state management
+    - React-router for client side routing    
+    - Redux-saga for saga async design pattern
+    - GraphQL proxy as query target (https://graphql-compose.herokuapp.com/northwind/?)
+    - Axios for fetching data        
     - Enzyme and React-test-render for testing
 
 
