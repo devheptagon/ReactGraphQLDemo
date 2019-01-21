@@ -15,7 +15,7 @@ describe('Pager is being tested', () => {
 
     })
 
-    test('has 2 buttons', () => {        
+    test('has previous and next buttons', () => {        
         const buttons = mountedPager.find('Button')
         expect(buttons.length).toBe(2)
     })

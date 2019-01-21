@@ -7,7 +7,7 @@ import Pager from '../shared/pager'
 import { preFetchProductsAction } from '../../redux/appActions'
 import Loading from '../shared/loading'
 import ProductListItem from './product-list-item'
-import ThemeSelector from '../shared/themeSelector'
+import ThemeSelector from '../shared/theme-selector'
 import Empty from './empty'
 
 export class ProductList extends Component {
