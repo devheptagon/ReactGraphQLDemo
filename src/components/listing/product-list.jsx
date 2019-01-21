@@ -10,7 +10,7 @@ import ProductListItem from './product-list-item'
 import ThemeSelector from '../shared/themeSelector'
 import Empty from './empty'
 
-class ProductList extends Component {
+export class ProductList extends Component {
     componentDidMount() {
         let currentPage = this.getCurrentPage()
         this.props.fetchProducts(currentPage)
