@@ -1,14 +1,5 @@
-import { formatMoney } from '../utils/helper'
-import Proxy from '../utils/proxy'
+import Proxy from '../proxy'
 import axios from 'axios'
-
-describe('helper functions are being tested', () => {
-    test('formats money properly', () => {
-        const amounts = [0.1, 1, 100]
-        const formattedAmounts = ['£0.10', '£1.00', '£100.00']
-        amounts.map((amount, index) => expect(formatMoney(amount)).toBe(formattedAmounts[index]))    
-    })
-})
 
 jest.mock('axios')
 
