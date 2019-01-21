@@ -6,23 +6,23 @@ import Button from '../shared/button'
 
 class Home extends Component {
   render() {
-    return (      
+    return (
       <Wrapper>
-        <Jumbotron>                
+        <Jumbotron>
           <p>
             This is a simple hero unit, a simple jumbotron-style component for calling
             extra attention to featured content or information.
           </p>
-          <p>            
-              <Button>
-                <Link to="/product-list/1">
-                  START SAMPLE APPLICATION
+          <p>
+            <Button>
+              <Link to="/product-list/1">
+                START SAMPLE APPLICATION
                 </Link>
-              </Button>            
+            </Button>
           </p>
         </Jumbotron>
-      </Wrapper>   
-    )    
+      </Wrapper>
+    )
   }
 }
 

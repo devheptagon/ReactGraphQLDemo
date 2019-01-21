@@ -7,25 +7,25 @@ import { ThemeContext } from '../../theme/themes'
 const formatFieldValue = (key, value) => key === 'unitPrice' ? formatMoney(value) : value
 
 const ProductListItem = (props) => {
-    const {product, isHeaderRow} = props
-    return ( 
+    const { product, isHeaderRow } = props
+    return (
         <ThemeContext.Consumer>
-            { 
-                ({theme}) => <ListItem isHeaderRow={isHeaderRow} theme={theme}>
-                            {
-                                Object.keys(product).map(key => 
-                                    <ListItemField key={key}>
-                                        { isHeaderRow ? key : formatFieldValue(key, product[key]) }
-                                    </ListItemField>)
-                            }
-                        </ListItem>
-            }        
+            {
+                ({ theme }) => <ListItem isHeaderRow={isHeaderRow} theme={theme}>
+                    {
+                        Object.keys(product).map(key =>
+                            <ListItemField key={key}>
+                                {isHeaderRow ? key : formatFieldValue(key, product[key])}
+                            </ListItemField>)
+                    }
+                </ListItem>
+            }
         </ThemeContext.Consumer>
     )
 }
 
 ProductListItem.propTypes = {
-    product: PropTypes.object.isRequired, 
+    product: PropTypes.object.isRequired,
     isHeaderRow: PropTypes.bool
 }
 

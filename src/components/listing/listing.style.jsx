@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -17,18 +18,14 @@ export const List = styled.div`
     }    
 `
 
-export const ListItem = styled.div`
+export const ListItem = (props) => props.isHeaderRow
+    ? <ListHeaderItem {...props}>{props.children}</ListHeaderItem>
+    : <ListRegularItem {...props}>{props.children}</ListRegularItem>
+
+export const ListItemBase = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    font-weight: ${props => props.isHeaderRow ? 'bold': 'normal'};        
-    ${props => props.isHeaderRow && 'text-transform: uppercase'};
-    background: ${props => props.isHeaderRow ? props.theme.headerRowBackground: props.theme.rowBackground};            
-    border-bottom: 1px dotted ${props => props.theme.rowBorderColor};
-    &: hover {
-        background: ${props => !props.isHeaderRow && props.theme.rowHoverBackground};
-        color: ${props => !props.isHeaderRow && props.theme.rowHoverColor};
-    };
+    justify-content: flex-start;        
     &: last-child {
         border-bottom: 0;
     };
@@ -51,6 +48,23 @@ export const ListItem = styled.div`
             display: none
         }
     }    
+`
+
+export const ListHeaderItem = styled(ListItemBase)`
+    border-bottom: 1px dotted ${props => props.theme.rowBorderColor};   
+    background: ${props => props.theme.headerRowBackground};    
+    font-weight: bold;        
+    text-transform: uppercase;         
+`
+
+export const ListRegularItem = styled(ListItemBase)`
+    border-bottom: 1px dotted ${props => props.theme.rowBorderColor};    
+    background: ${props => props.theme.rowBackground};   
+    font-weight: normal;                             
+    &: hover {
+        background: ${props => props.theme.rowHoverBackground};
+        color: ${props => props.theme.rowHoverColor};
+    };
 `
 
 export const ListItemField = styled.div`    
