@@ -24,4 +24,3 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
     - Enzyme and React-test-render for testing
 
 
-Please see live version at http://ec2-3-88-225-250.compute-1.amazonaws.com
